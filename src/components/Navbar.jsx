@@ -54,13 +54,13 @@ export default function Navbar() {
           </Link>
         ))}
         {hashLinks.map((link) => (
-          <a
+          <Link
             key={link.name}
-            href={location.pathname === '/' ? link.hash : `/${link.hash}`}
+            to={{ pathname: '/', hash: link.hash }}
             className={location.hash === link.hash ? 'active' : ''}
           >
             {link.name}
-          </a>
+          </Link>
         ))}
       </nav>
 
@@ -87,9 +87,9 @@ export default function Navbar() {
               </Link>
             ))}
             {hashLinks.map((link) => (
-              <a key={link.name} href={location.pathname === '/' ? link.hash : `/${link.hash}`} onClick={closeMenu}>
+              <Link key={link.name} to={{ pathname: '/', hash: link.hash }} onClick={closeMenu}>
                 {link.name}
-              </a>
+              </Link>
             ))}
             <Link to="/register" style={{ color: 'var(--lime)', fontWeight: 'bold' }} onClick={closeMenu}>
               Register Your Team &rarr;

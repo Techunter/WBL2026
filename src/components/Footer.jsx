@@ -1,11 +1,13 @@
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
+  const assetBase = import.meta.env.BASE_URL;
+
   return (
     <footer id="contact">
       <div className="footer-brand">
         <Link to="/">
-          <img src="/logo.png" alt="WBL Logo" style={{ width: '50px' }} />
+          <img src={`${assetBase}logo.png`} alt="WBL Logo" style={{ width: '50px' }} />
         </Link>
         <strong>
           WINTER BASH

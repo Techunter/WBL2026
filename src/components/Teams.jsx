@@ -1,17 +1,18 @@
 import { motion } from 'framer-motion';
 
 export default function Teams() {
+  const assetBase = import.meta.env.BASE_URL;
   const teams = [
-    { name: 'Nightmare', img: '/nightmare.png' },
-    { name: 'Phoenix', img: '/phoenix.png' },
-    { name: 'GZB GIANTS', img: '/gg.png' },
-    { name: 'Fire Falcons', img: '/firefalcons.png' },
-    { name: 'Revengers', img: '/revengers.png' },
-    { name: 'VNN warriors', img: '/vnn.png' },
-    { name: 'Death Warriors', img: '/firefalcons.png' },
-    { name: 'WSK', img: '/wsk.png' },
-    { name: 'INVADERS', img: '/invaders.png' },
-    { name: 'Dominators', img: '/dominators.png' },
+    { name: 'Nightmare', img: `${assetBase}nightmare.png` },
+    { name: 'Phoenix', img: `${assetBase}phoenix.png` },
+    { name: 'GZB GIANTS', img: `${assetBase}gg.png` },
+    { name: 'Fire Falcons', img: `${assetBase}firefalcons.png` },
+    { name: 'Revengers', img: `${assetBase}revengers.png` },
+    { name: 'VNN warriors', img: `${assetBase}vnn.png` },
+    { name: 'Death Warriors', img: `${assetBase}firefalcons.png` },
+    { name: 'WSK', img: `${assetBase}wsk.png` },
+    { name: 'INVADERS', img: `${assetBase}invaders.png` },
+    { name: 'Dominators', img: `${assetBase}dominators.png` },
   ];
 
   return (
@@ -23,7 +24,7 @@ export default function Teams() {
 
       <div className="team-grid">
         {teams.map((team, idx) => (
-          <motion.div 
+          <motion.div
             key={idx}
             className="team-card"
             initial={{ opacity: 0, y: 30 }}

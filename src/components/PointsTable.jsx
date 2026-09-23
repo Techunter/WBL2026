@@ -1,20 +1,21 @@
 import { motion } from 'framer-motion';
 
 export default function PointsTable() {
+  const assetBase = import.meta.env.BASE_URL;
   const groupA = [
-    { name: 'Nightmare', img: '/nightmare.png', m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
-    { name: 'Phoenix', img: '/phoenix.png', m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
-    { name: 'GZB GIANTS', img: '/gg.png', m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
-    { name: 'Fire Falcons', img: '/firefalcons.png', m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
-    { name: 'Revengers', img: '/revengers.png', m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
+    { name: 'Nightmare', img: `${assetBase}nightmare.png`, m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
+    { name: 'Phoenix', img: `${assetBase}phoenix.png`, m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
+    { name: 'GZB GIANTS', img: `${assetBase}gg.png`, m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
+    { name: 'Fire Falcons', img: `${assetBase}firefalcons.png`, m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
+    { name: 'Revengers', img: `${assetBase}revengers.png`, m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
   ];
 
   const groupB = [
-    { name: 'VNN warriors', img: '/vnn.png', m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
-    { name: 'Death Warriors', img: '/firefalcons.png', m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
-    { name: 'WSK', img: '/wsk.png', m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
-    { name: 'INVADERS', img: '/invaders.png', m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
-    { name: 'Dominators', img: '/dominators.png', m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
+    { name: 'VNN warriors', img: `${assetBase}vnn.png`, m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
+    { name: 'Death Warriors', img: `${assetBase}firefalcons.png`, m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
+    { name: 'WSK', img: `${assetBase}wsk.png`, m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
+    { name: 'INVADERS', img: `${assetBase}invaders.png`, m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
+    { name: 'Dominators', img: `${assetBase}dominators.png`, m: 0, w: 0, l: 0, pts: 0, nrr: '0.00' },
   ];
 
   const renderTable = (groupData) => (
@@ -58,7 +59,7 @@ export default function PointsTable() {
         <a href="#points-table" className="view-all">Full Standings &rarr;</a>
       </div>
 
-      <motion.div 
+      <motion.div
         className="group-layout"
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

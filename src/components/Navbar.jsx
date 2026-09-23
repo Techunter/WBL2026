@@ -6,6 +6,7 @@ import { Menu, X } from 'lucide-react';
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  const assetBase = import.meta.env.BASE_URL;
 
   const toggleMenu = () => setIsOpen(!isOpen);
   const closeMenu = () => setIsOpen(false);
@@ -28,14 +29,14 @@ export default function Navbar() {
   ];
 
   return (
-    <motion.header 
+    <motion.header
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       className="navbar"
     >
       <Link to="/" className="logo-area" onClick={closeMenu}>
-        <img src="/logo.png" alt="WBL Logo" />
+        <img src={`${assetBase}logo.png`} alt="WBL Logo" />
         <div className="logo-name">
           WINTER BASH<br />
           <span>LEAGUE</span>

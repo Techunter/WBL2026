@@ -190,7 +190,7 @@ img {
             rgba(3, 12, 21, 0.90) 38%,
             rgba(3, 12, 21, 0.48) 68%,
             rgba(3, 12, 21, 0.88) 100%),
-        url("hero.png");
+        var(--hero-image);
 
     background-size: cover;
     background-position: center;
@@ -810,7 +810,7 @@ img {
         linear-gradient(0deg,
             rgba(2, 12, 21, 0.95),
             rgba(2, 12, 21, 0.15)),
-        url("player.jpg");
+        var(--feature-image);
 
     background-size: cover;
     background-position: center;
@@ -1152,7 +1152,7 @@ footer p {
             linear-gradient(180deg,
                 rgba(3, 12, 21, 0.72),
                 rgba(3, 12, 21, 0.97)),
-            url("hero.jpg");
+            var(--hero-mobile-image);
 
         background-position: 65% center;
     }

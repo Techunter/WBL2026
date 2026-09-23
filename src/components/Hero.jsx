@@ -3,8 +3,14 @@ import { motion } from 'framer-motion';
 
 export default function Hero() {
   return (
-    <section className="hero">
-      <motion.div 
+    <section
+      className="hero"
+      style={{
+        '--hero-image': `url("${import.meta.env.BASE_URL}hero.png")`,
+        '--hero-mobile-image': `url("${import.meta.env.BASE_URL}hero.jpg")`,
+      }}
+    >
+      <motion.div
         initial={{ opacity: 0, scale: 0.95 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
@@ -16,7 +22,7 @@ export default function Hero() {
         </div>
 
         <h1 className="hero-title">
-          WINTER BASH<br/>
+          WINTER BASH<br />
           <span>LEAGUE</span>
         </h1>
 

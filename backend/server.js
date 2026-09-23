@@ -7,7 +7,7 @@ const path = require('path');
 const fs = require('fs');
 
 const app = express();
-const port = process.env.PORT || 5000;
+const port = process.env.PORT || 5001;
 
 app.use(cors());
 app.use(express.json());
@@ -76,7 +76,7 @@ app.post('/api/registrations', upload.fields(uploadFields), asyncHandler(async (
     const name = req.body[`player${i}Name`] || null;
     const phone = req.body[`player${i}Phone`] || null;
     const photoPath = req.files && req.files[`player${i}Photo`] ? req.files[`player${i}Photo`][0].filename : null;
-    
+
     // Push even if empty, to maintain structure, as optional
     players.push({ playerIndex: i, name, phone, photoPath });
   }
@@ -88,7 +88,7 @@ app.post('/api/registrations', upload.fields(uploadFields), asyncHandler(async (
     RETURNING id, created_at;
   `;
   const values = [teamName.trim(), captainName.trim(), captainPhone.trim(), paymentMode, teamLogoPath, JSON.stringify(players)];
-  
+
   const result = await pool.query(query, values);
   const newRegistration = result.rows[0];
 

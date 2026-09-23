@@ -1,5 +1,3 @@
-
-
 /* =====================================================
    RESET
 ===================================================== */
@@ -47,7 +45,7 @@ img {
     --navy: #06111d;
     --navy2: #0a1b2c;
     --card: #0b2033;
-    --border: rgba(255,255,255,0.10);
+    --border: rgba(255, 255, 255, 0.10);
     --muted: #8e9aa7;
 }
 
@@ -73,7 +71,7 @@ img {
     background: rgba(4, 14, 24, 0.82);
     backdrop-filter: blur(14px);
 
-    border: 1px solid rgba(255,255,255,0.08);
+    border: 1px solid rgba(255, 255, 255, 0.08);
     border-radius: 18px;
     transition: background 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, transform 0.25s ease;
 }
@@ -159,7 +157,7 @@ img {
     width: 42px;
     height: 42px;
 
-    border: 1px solid rgba(255,255,255,0.2);
+    border: 1px solid rgba(255, 255, 255, 0.2);
     background: transparent;
     color: white;
 
@@ -179,6 +177,7 @@ img {
     min-height: 720px;
 
     position: relative;
+    overflow: hidden;
 
     display: flex;
     align-items: center;
@@ -186,13 +185,11 @@ img {
     padding: 130px 7% 80px;
 
     background:
-        linear-gradient(
-            90deg,
-            rgba(3,12,21,0.98) 0%,
-            rgba(3,12,21,0.90) 38%,
-            rgba(3,12,21,0.48) 68%,
-            rgba(3,12,21,0.88) 100%
-        ),
+        linear-gradient(90deg,
+            rgba(3, 12, 21, 0.98) 0%,
+            rgba(3, 12, 21, 0.90) 38%,
+            rgba(3, 12, 21, 0.48) 68%,
+            rgba(3, 12, 21, 0.88) 100%),
         url("hero.png");
 
     background-size: cover;
@@ -213,7 +210,7 @@ img {
     right: -200px;
     bottom: -250px;
 
-    background: rgba(156,255,0,0.08);
+    background: rgba(156, 255, 0, 0.08);
 
     filter: blur(100px);
 
@@ -283,7 +280,7 @@ img {
 
     padding: 0 23px;
 
-    border-right: 1px solid rgba(255,255,255,0.22);
+    border-right: 1px solid rgba(255, 255, 255, 0.22);
 }
 
 .hero-detail:first-child {
@@ -348,7 +345,7 @@ img {
     align-items: center;
     justify-content: center;
 
-    border: 1px solid rgba(255,255,255,0.55);
+    border: 1px solid rgba(255, 255, 255, 0.55);
 
     padding: 16px 26px;
 
@@ -374,7 +371,7 @@ img {
 
     display: grid;
 
-    grid-template-columns: repeat(4,1fr);
+    grid-template-columns: repeat(4, 1fr);
 
     background: #081a2a;
 
@@ -461,7 +458,7 @@ img {
 }
 
 .group-table thead th {
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
     color: #dfeaf4;
     font-size: 10px;
     letter-spacing: 1.2px;
@@ -469,11 +466,11 @@ img {
 }
 
 .group-table tbody tr:nth-child(even) {
-    background: rgba(255,255,255,0.02);
+    background: rgba(255, 255, 255, 0.02);
 }
 
 .group-table tbody tr:hover {
-    background: rgba(156,255,0,0.06);
+    background: rgba(156, 255, 0, 0.06);
 }
 
 .group-table td {
@@ -493,7 +490,7 @@ img {
     height: 26px;
     object-fit: contain;
     border-radius: 50%;
-    background: rgba(255,255,255,0.05);
+    background: rgba(255, 255, 255, 0.05);
     padding: 3px;
 }
 
@@ -578,11 +575,9 @@ img {
     align-items: center;
 
     background:
-        linear-gradient(
-            110deg,
+        linear-gradient(110deg,
             #0c263c,
-            #091c2d
-        );
+            #091c2d);
 
     border: 1px solid var(--border);
 
@@ -723,7 +718,7 @@ img {
 
     display: grid;
 
-    grid-template-columns: repeat(5,1fr);
+    grid-template-columns: repeat(5, 1fr);
 
     gap: 12px;
 }
@@ -761,7 +756,7 @@ img {
 
     border-radius: 18px;
 
-    background: rgba(255,255,255,0.04);
+    background: rgba(255, 255, 255, 0.04);
 
     padding: 8px;
 }
@@ -785,6 +780,7 @@ img {
     grid-template-columns: 1fr 1fr;
 
     gap: 18px;
+    overflow: hidden;
 }
 
 .feature-card {
@@ -811,11 +807,9 @@ img {
 .feature-card:first-child {
 
     background:
-        linear-gradient(
-            0deg,
-            rgba(2,12,21,0.95),
-            rgba(2,12,21,0.15)
-        ),
+        linear-gradient(0deg,
+            rgba(2, 12, 21, 0.95),
+            rgba(2, 12, 21, 0.15)),
         url("player.jpg");
 
     background-size: cover;
@@ -825,11 +819,9 @@ img {
 .feature-card:nth-child(2) {
 
     background:
-        linear-gradient(
-            0deg,
+        linear-gradient(0deg,
             #0b263d,
-            #0a1a2a
-        );
+            #0a1a2a);
 }
 
 .feature-card h2 {
@@ -910,10 +902,8 @@ img {
 
     padding: 25px 15px 15px;
 
-    background: linear-gradient(
-        transparent,
-        rgba(0,0,0,0.85)
-    );
+    background: linear-gradient(transparent,
+            rgba(0, 0, 0, 0.85));
 
     font-size: 13px;
 
@@ -1105,7 +1095,7 @@ footer p {
     }
 
     .team-grid {
-        grid-template-columns: repeat(3,1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .match-card {
@@ -1159,11 +1149,9 @@ footer p {
         padding: 115px 25px 55px;
 
         background:
-            linear-gradient(
-                180deg,
-                rgba(3,12,21,0.72),
-                rgba(3,12,21,0.97)
-            ),
+            linear-gradient(180deg,
+                rgba(3, 12, 21, 0.72),
+                rgba(3, 12, 21, 0.97)),
             url("hero.jpg");
 
         background-position: 65% center;
@@ -1375,4 +1363,3 @@ footer p {
     }
 
 }
-

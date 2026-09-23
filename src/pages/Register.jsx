@@ -9,16 +9,16 @@ export default function Register() {
   const [successId, setSuccessId] = useState(null);
 
   const inputStyle = {
-    width: '100%', padding: '12px', borderRadius: '8px', 
+    width: '100%', padding: '12px', borderRadius: '8px',
     border: '1px solid rgba(255,255,255,0.12)', background: 'rgba(255,255,255,0.03)', color: 'white'
   };
   const fileStyle = {
-    width: '100%', padding: '10px', border: '1px dashed rgba(156,255,0,0.6)', 
+    width: '100%', padding: '10px', border: '1px dashed rgba(156,255,0,0.6)',
     borderRadius: '8px', background: 'rgba(156,255,0,0.03)', color: 'white'
   };
   const radioStyle = (selected) => ({
-    flex: 1, padding: '12px', display: 'flex', alignItems: 'center', gap: '8px', 
-    border: `1px solid ${selected ? 'var(--lime)' : 'var(--border)'}`, 
+    flex: 1, padding: '12px', display: 'flex', alignItems: 'center', gap: '8px',
+    border: `1px solid ${selected ? 'var(--lime)' : 'var(--border)'}`,
     borderRadius: '8px', background: selected ? 'rgba(156,255,0,0.08)' : 'transparent', cursor: 'pointer'
   });
 
@@ -31,7 +31,7 @@ export default function Register() {
     const formData = new FormData(e.target);
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5000/api';
+      const apiUrl = import.meta.env.VITE_API_URL || 'http://localhost:5001/api';
       const response = await fetch(`${apiUrl}/registrations`, {
         method: 'POST',
         body: formData,
@@ -76,7 +76,7 @@ export default function Register() {
           </motion.div>
         )}
 
-        <motion.form 
+        <motion.form
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -130,9 +130,9 @@ export default function Register() {
           </div>
 
           <div style={{ display: 'flex', justifyContent: 'center', marginTop: '50px' }}>
-            <button 
-              type="submit" 
-              className="primary-button" 
+            <button
+              type="submit"
+              className="primary-button"
               disabled={isLoading}
               style={{ padding: '16px 36px', fontSize: '16px', border: 'none', cursor: isLoading ? 'not-allowed' : 'pointer', opacity: isLoading ? 0.7 : 1 }}
             >
